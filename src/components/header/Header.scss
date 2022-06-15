@@ -1,0 +1,52 @@
+header {
+  @apply fixed w-full flex justify-center items-center;
+  z-index: 1001;
+
+  .logo-header {
+    @apply flex items-center justify-between;
+  }
+
+  img {
+    @apply w-full object-cover;
+  }
+
+  .logo {
+    width: 280px;
+  }
+
+  .mint-btn {
+    @apply absolute bg-transparent border-none uppercase;
+    right: 60px;
+    color: rgba(231, 233, 255);
+    background: url('/assets/images/Vector.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 168px;
+    height: 60px;
+
+    &:hover {
+      @apply transition-colors duration-300;
+      color: rgba(231, 233, 255, 0.2);
+    }
+  }
+
+  @media (min-width: 1192px) and (max-width: 1400px) {
+    @apply justify-between pl-14;
+  }
+
+  @media (max-width: 1191px) {
+    @apply px-5;
+
+    .logo-header {
+      @apply grid grid-cols-3 w-4/5;
+    }
+
+    .mint-btn {
+      display: none;
+    }
+
+    .logo {
+      @apply mx-auto;
+    }
+  }
+}

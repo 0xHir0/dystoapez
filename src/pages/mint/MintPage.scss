@@ -1,0 +1,112 @@
+.mint-page {
+  @apply bg-cover bg-no-repeat min-h-screen bg-black pt-8 pb-12;
+  background: url('/assets/images/mint-bg.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .mint-page-panel {
+    @apply relative p-8 flex flex-col justify-center mx-auto mt-24 md:mt-32 text-center;
+    width: fit-content;
+    background: linear-gradient(
+      180deg,
+      rgba(60, 60, 68, 0.74) 0%,
+      rgba(23, 23, 24, 0.38) 90.52%
+    );
+    backdrop-filter: blur(80px);
+    clip-path: polygon(0 14px, 0 100%, 96.7% 100%, 100% 97.8%, 100% 0, 14px 0);
+    color: #f3f6ff;
+
+    @media (max-width: 768px) {
+      max-width: 340px;
+      // clip-path: polygon(
+      //   0 14px,
+      //   0 100%,
+      //   326px 100%,
+      //   100% 536px,
+      //   100% 0,
+      //   16px 0
+      // );
+    }
+
+    img {
+      clip-path: polygon(0 4%, 0 100%, 96% 100%, 100% 96%, 100% 0, 4% 0);
+    }
+
+    h3 {
+      margin-top: 24px;
+      font-family: 'Level-Up';
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 1rem;
+      font-family: 'Blinker';
+      line-height: 19px;
+    }
+
+    .btn-group {
+      background: url('/assets/images/mintbtn-bg.png') no-repeat;
+      background-size: 100% 100%;
+      @apply flex justify-between items-center overflow-hidden mt-6;
+
+      .left,
+      .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 58px;
+        height: 58px;
+
+        &:hover {
+          path {
+            transition: all 0.3s ease;
+
+            stroke: #f3f6ff67;
+          }
+        }
+      }
+
+      .left {
+        border-right: 1.5px solid rgba(231, 233, 255, 0.3);
+      }
+
+      .right {
+        border-left: 1.5px solid rgba(231, 233, 255, 0.3);
+      }
+    }
+
+    .mint-btn {
+      margin-top: 10px;
+      background-color: #131314;
+      width: 100%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-family: 'Level-Up';
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #f3f6ff;
+      clip-path: polygon(0 12px, 0 100%, 360px 100%, 100% 44px, 100% 0, 12px 0);
+
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #f3f6ff3b;
+      }
+
+      @media (max-width: 767px) {
+        clip-path: polygon(
+          0 12px,
+          0 100%,
+          264px 100%,
+          100% 44px,
+          100% 0,
+          12px 0
+        );
+      }
+    }
+  }
+}

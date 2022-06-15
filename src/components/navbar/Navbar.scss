@@ -1,0 +1,113 @@
+.nav {
+  @apply fixed flex bottom-0 justify-center w-full items-center;
+  z-index: 1001;
+
+  @media (max-width: 1440px) {
+    @apply flex-col gap-y-4 py-4;
+  }
+
+  @media (max-width: 1024px) {
+    @apply py-0;
+  }
+
+  .navbar-toggle {
+    background: url('/assets/images/expand.png');
+    @apply absolute;
+    top: -58px;
+    width: 87px;
+    height: 58px;
+    z-index: 99;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .social-bar {
+    @apply absolute right-16 flex gap-10 items-center;
+    z-index: 99;
+
+    @media (max-width: 1440px) {
+      @apply relative right-0;
+    }
+
+    @media (max-width: 1023px) {
+      @apply hidden;
+    }
+
+    a {
+      path {
+        @apply transition-all ease-out duration-300;
+      }
+
+      &:hover {
+        color: rgba(231, 233, 255);
+
+        path {
+          fill-opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  background: url('/assets/images/navbar.png');
+  @apply flex justify-center bg-no-repeat bg-contain overflow-hidden;
+  z-index: 99;
+  transition: all 0.4s ease-in-out;
+
+  @media (max-width: 1023px) {
+    background: url('/assets/images/expand-panel.png');
+    @apply flex-col w-full object-cover bg-no-repeat bg-cover;
+    // padding: 20px 0 20px 0;
+    height: 0px;
+
+    li {
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+
+    .social-bar {
+      @apply flex py-4 justify-center;
+      transition: all 0.3s ease;
+      opacity: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .social-bar {
+      display: none;
+    }
+  }
+
+  .nav-item {
+    @apply flex justify-center items-center gap-1 px-8 py-4 transition-all ease-out duration-300 text-sm uppercase;
+    font-family: 'Blinker';
+    color: rgba(231, 233, 255, 0.2);
+
+    path {
+      @apply transition-all ease-out duration-300;
+    }
+
+    &:hover {
+      color: rgba(231, 233, 255);
+
+      path {
+        fill-opacity: 1;
+      }
+    }
+  }
+}
+
+.navbar.opened {
+  height: 452px;
+  li {
+    opacity: 1;
+  }
+  .social-bar {
+    @media (max-width: 1023px) {
+      opacity: 1;
+    }
+  }
+}

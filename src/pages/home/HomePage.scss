@@ -1,0 +1,455 @@
+.homepage {
+  h3 {
+    @apply uppercase;
+    font-family: 'Level-Up';
+    font-size: 21px;
+    color: #e7e9ff;
+  }
+
+  p {
+    @apply text-base mb-6;
+    font-family: 'Blinker';
+    color: #e7e9ff;
+  }
+}
+
+.container-shadow {
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.61);
+}
+
+.banner-section {
+  @apply bg-cover bg-no-repeat min-h-screen bg-black pt-9;
+  background: url('/assets/images/texture-home1.png') no-repeat;
+  background-size: cover;
+  color: #e0ddd5;
+
+  .banner-title {
+    @apply flex justify-center mt-24;
+
+    @media (max-width: 767px) {
+      margin-top: 180px;
+    }
+
+    img {
+      @apply object-contain;
+    }
+  }
+
+  .banner-frame {
+    @apply absolute bottom-0;
+
+    img {
+      @apply object-cover;
+    }
+  }
+
+  .banner-monkey {
+    @apply absolute bottom-0 flex justify-center w-full;
+
+    img {
+      @apply object-contain;
+
+      @media (max-width: 767px) {
+        width: 380px;
+      }
+
+      @media (min-width: 768px) {
+        width: 420px;
+      }
+
+      @media (min-width: 992px) {
+        width: 480px;
+      }
+
+      @media (min-width: 1400px) {
+        width: 540px;
+      }
+
+      @media (min-width: 1920px) {
+        width: 610px;
+      }
+    }
+  }
+
+  .banner-city {
+    @apply absolute bottom-0 w-full flex justify-between;
+
+    img {
+      @apply object-cover w-full;
+
+      @media (max-width: 767px) {
+        width: 180px;
+      }
+
+      @media (min-width: 768px) {
+        width: 260px;
+      }
+
+      @media (min-width: 992px) {
+        width: 320px;
+      }
+
+      @media (min-width: 1400px) {
+        width: 400px;
+      }
+
+      @media (min-width: 1920px) {
+        width: 500px;
+      }
+    }
+  }
+
+  .banner-shadow {
+    @apply absolute bottom-0 w-full z-40;
+
+    img {
+      @apply object-cover w-full;
+
+      @media (max-width: 767px) {
+        height: 140px;
+      }
+
+      @media (min-width: 768px) {
+        height: 180px;
+      }
+
+      @media (min-width: 992px) {
+        height: 220px;
+      }
+
+      @media (min-width: 1400px) {
+        height: 260px;
+      }
+
+      @media (min-width: 1920px) {
+        height: 300px;
+      }
+    }
+  }
+}
+
+.lore-section {
+  background: url('/assets/images/texture1.png') repeat;
+  @apply relative;
+  background-size: inherit;
+
+  .lore-description {
+    @apply leading-6 md:mt-20;
+    max-width: 583px;
+    color: #e7e9ff;
+  }
+
+  .sparkle-image {
+    @apply relative lg:absolute lg:right-0 lg:top-24 object-contain;
+    width: 650px;
+  }
+
+  .frame-image {
+    @apply hidden xl:block lg:absolute lg:right-14 object-contain;
+    width: 800px;
+  }
+
+  .building-banner {
+    @apply object-cover w-full z-50;
+    height: 468px;
+
+    @media (min-width: 768px) {
+      height: 600px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 720px;
+    }
+
+    @media (min-width: 1280px) {
+      height: 800px;
+    }
+
+    @media (min-width: 1536px) {
+      height: 912px;
+    }
+
+    @media (min-width: 1920px) {
+      height: 1200px;
+    }
+  }
+}
+
+.nft-section {
+  background: url('/assets/images/texture.png') repeat;
+  @apply relative py-32;
+  background-size: inherit;
+
+  .carousel-panel {
+    background: url('/assets/images/cylinder.png');
+    @apply bg-center bg-contain bg-no-repeat mx-auto;
+    max-width: 1500px;
+
+    @media (max-width: 560px) {
+      .react-multi-carousel-list {
+        @apply w-80 mx-auto;
+      }
+
+      @apply py-24;
+    }
+
+    .item {
+      background: url('/assets/images/nft-frame.png');
+      @apply bg-center bg-contain bg-no-repeat flex justify-center pr-4 pb-4 md:pr-3 md:pb-3;
+
+      span {
+        @apply relative overflow-hidden;
+
+        &::before {
+          content: '';
+          background: url('/assets/images/texture.png');
+          @apply absolute top-0 left-0 bg-center bg-auto bg-no-repeat;
+          margin: -14px;
+          width: 22px;
+          height: 30px;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          margin: -14px;
+          right: 0;
+          width: 22px;
+          height: 30px;
+          transform: rotate(45deg);
+          background: url('/assets/images/texture.png');
+          @apply bg-center bg-auto bg-no-repeat;
+        }
+      }
+    }
+  }
+
+  .carousel-btn-group {
+    background: url('/assets/images/carousel-control.png');
+    @apply bg-center bg-contain bg-no-repeat flex justify-center items-center;
+    min-width: 280px;
+    min-height: 60px;
+    .next,
+    .prev {
+      @apply w-14 h-14;
+    }
+
+    .page-bar {
+      @apply w-40 h-14 flex justify-center items-center text-white;
+    }
+  }
+}
+
+.legend-apez-section {
+  .carousel-panel {
+    background: none;
+
+    @media (max-width: 767px) {
+      background: url('/assets/images/cylinder1.png');
+      @apply bg-no-repeat bg-contain;
+    }
+  }
+
+  .react-multi-carousel-list {
+    @apply w-80 mx-auto;
+  }
+}
+
+.roadmap-section {
+  background: url('/assets/images/texture.png') repeat;
+  @apply relative overflow-hidden;
+  background-size: inherit;
+
+  @media (min-width: 768px) {
+    padding-bottom: 150px;
+  }
+
+  .title {
+    @apply mx-auto px-16 md:px-8;
+    max-width: 1500px;
+  }
+
+  .roadmap-list {
+    @apply mx-auto relative top-0;
+    max-width: 912px;
+
+    @media (min-width: 768px) {
+      top: -100px;
+    }
+
+    @media (max-width: 992px) {
+      @apply px-8;
+    }
+
+    .roadmap-item {
+      @apply flex flex-col md:flex-row gap-6 pb-24 px-8 md:px-0;
+      max-width: 600px;
+
+      &.left {
+        @apply md:mr-auto;
+      }
+
+      &.right {
+        @apply md:ml-auto;
+      }
+
+      &.last {
+        @apply pb-0 md:pb-24;
+      }
+
+      h2 {
+        @apply text-8xl leading-none uppercase;
+        font-family: 'Jeebz-Regular';
+        background: -webkit-linear-gradient(#ff41e1, #aa51f0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media (min-width: 768px) {
+          font-size: 120px;
+        }
+      }
+
+      h3 {
+        @apply uppercase;
+        font-family: 'Level-Up';
+        font-size: 21px;
+        line-height: 25px;
+        margin-bottom: 22px;
+      }
+
+      p {
+        @apply font-semibold text-base;
+        font-family: 'Blinker';
+        line-height: 25px;
+      }
+    }
+
+    .circle-frame {
+      background: url('/assets/images/circle-frame.png') no-repeat;
+      @apply relative bg-cover bg-center;
+
+      @media (max-width: 768px) {
+        max-width: 600px;
+      }
+    }
+  }
+}
+
+.team-section {
+  background: url('/assets/images/texture.png') repeat;
+  @apply py-52 relative;
+  background-size: inherit;
+
+  .title {
+    @apply mx-auto;
+    max-width: 1500px;
+  }
+
+  .members {
+    @apply mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-6 gap-y-8 justify-items-center;
+    margin-top: -50px;
+
+    @media (min-width: 768px) {
+      margin-top: -100px;
+      max-width: 700px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-top: -150px;
+      max-width: 900px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-top: -150px;
+      max-width: 1192px;
+    }
+
+    @media (min-width: 1536px) {
+      margin-top: -150px;
+      max-width: 1400px;
+    }
+
+    @media (min-width: 1280px) {
+      margin-top: -200px;
+    }
+
+    @media (min-width: 1536px) {
+      margin-top: -250px;
+    }
+
+    .member {
+      @apply relative z-50;
+      max-width: 320px;
+
+      @media (min-width: 1024px) and (max-width: 1280px) {
+        &:nth-child(10) {
+          @apply lg:col-start-2 lg:col-span-1;
+        }
+      }
+      @media (min-width: 1280px) and (max-width: 1536px) {
+        &:nth-child(9) {
+          @apply lg:col-start-2 lg:col-span-1;
+        }
+
+        &:nth-child(10) {
+          @apply lg:col-start-3 lg:col-span-1;
+        }
+      }
+
+      .body {
+        @apply bg-contain relative flex flex-col z-20;
+
+        img {
+        }
+
+        .description {
+          @apply px-8 flex justify-center flex-col text-white text-center;
+          padding-top: 10%;
+
+          h5 {
+            @apply text-base leading-5 uppercase mb-1;
+            font-family: 'Level-Up';
+          }
+          span {
+            @apply text-sm uppercase;
+            font-family: 'Blinker';
+            line-height: 17px;
+          }
+        }
+      }
+
+      .footer {
+        @apply flex justify-center z-10;
+
+        a {
+          background: url('/assets/images/twitter-button.png') no-repeat;
+          @apply bg-contain flex justify-center items-center;
+          margin-top: -10%;
+          width: 60px;
+          height: 75px;
+          padding-top: 10%;
+
+          svg {
+            @apply w-6 h-6;
+
+            path {
+              @apply transition-all duration-300;
+              fill-opacity: 1;
+            }
+          }
+
+          &:hover {
+            path {
+              fill-opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .position-initial {
+    position: initial;
+  }
+}

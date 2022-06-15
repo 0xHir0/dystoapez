@@ -1,0 +1,176 @@
+.scrap-page {
+  @apply overflow-hidden;
+
+  .banner-section {
+    @apply bg-cover bg-no-repeat bg-black pt-8 pb-12;
+    background: url('/assets/images/scrap-bg.png') no-repeat;
+    background-size: cover;
+    color: #e0ddd5;
+
+    .banner-title {
+      background: url('/assets/images/panel.png') no-repeat;
+      @apply relative bg-cover bg-center flex items-center justify-center mx-8 md:mx-12 lg:mx-16 2xl:mx-auto px-8 md:px-16 lg:px-20 xl:px-24;
+
+      max-width: 1496px;
+
+      @media (max-width: 1024px) {
+        height: 360px;
+      }
+
+      @media (max-width: 767px) {
+        height: 320px;
+      }
+
+      @media (max-width: 560px) {
+        height: 245px;
+      }
+
+      height: 443px;
+    }
+
+    .banner-shadow {
+      @apply absolute bottom-0 w-full;
+
+      img {
+        @apply object-cover w-full;
+
+        @media (max-width: 767px) {
+          height: 140px;
+        }
+
+        @media (min-width: 768px) {
+          height: 180px;
+        }
+
+        @media (min-width: 992px) {
+          height: 220px;
+        }
+
+        @media (min-width: 1400px) {
+          height: 260px;
+        }
+
+        @media (min-width: 1920px) {
+          height: 300px;
+        }
+      }
+    }
+
+    .box-image {
+      @media (max-width: 767px) {
+        width: 228px;
+      }
+    }
+
+    .sprocket-image {
+      @apply absolute top-2/4 left-2/4 z-50;
+    }
+
+    .scrap-info {
+      @apply md:text-base absolute top-2/4 uppercase text-center;
+      transform: translateY(-60%);
+      font-family: 'Level-Up';
+
+      @media (max-width: 767px) {
+        @apply text-xs text-center font-normal;
+        left: 0 !important;
+        right: 0 !important;
+      }
+
+      &.left {
+        left: 30px;
+
+        @media (max-width: 767px) {
+          transform: translateY(-20%);
+        }
+      }
+
+      &.right {
+        right: 30px;
+      }
+    }
+
+    .claim-btn {
+      background: url('/assets/images/explore.png');
+      @apply relative bg-no-repeat bg-contain bg-center uppercase text-xs md:text-base transition-opacity duration-300;
+      font-family: 'Level-Up';
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .utility-section {
+    background: url('/assets/images/texture.png') repeat;
+    @apply pt-52 relative;
+    background-size: inherit;
+
+    .token-story {
+      @apply mx-auto text-center px-8;
+
+      h3 {
+        @apply text-base uppercase;
+        font-family: 'Level-Up';
+      }
+
+      p {
+        @apply text-base;
+        line-height: 25px;
+      }
+
+      ul {
+        @apply text-left;
+        color: #e7e9ff;
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+        li {
+          @apply flex gap-1 items-start;
+          line-height: 30px;
+
+          img {
+            @apply object-contain mr-4 mt-1;
+          }
+
+          div {
+            z-index: 10;
+          }
+        }
+      }
+    }
+
+    .scrap-footer {
+      // background: url('/assets/images/footer.png') no-repeat;
+      @apply bg-cover relative md:py-32;
+
+      h3 {
+        @apply text-base whitespace-nowrap;
+        background: -webkit-linear-gradient(#ff41e1, #aa51f0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .utility-text {
+        font-family: 'Blinker';
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 25px;
+        color: #e7e9ff;
+      }
+    }
+  }
+
+  h3 {
+    @apply uppercase;
+    font-family: 'Level-Up';
+    font-size: 21px;
+    color: #e7e9ff;
+  }
+
+  p {
+    @apply text-base mb-6;
+    font-family: 'Blinker';
+    color: #e7e9ff;
+  }
+}

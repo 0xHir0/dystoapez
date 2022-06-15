@@ -1,0 +1,368 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Blinker';
+  src: url(./assets/font/Blinker-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: 'Jeebz-Bold';
+  src: url(./assets/font/Jeebz-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Jeebz-Regular';
+  src: url(./assets/font/Jeebz-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Level-Up';
+  src: url(./assets/font/Level-Up.otf);
+}
+
+html,
+body {
+  font-family: 'Blinker', sans-serif;
+}
+
+* {
+  font-family: inherit;
+}
+
+button {
+  outline: none !important;
+}
+
+h2 {
+  font-family: 'Jeebz-Regular';
+}
+
+.translate-y-m-50 {
+  transform: translateY(-50%);
+}
+
+.translate-m-50-p {
+  transform: translate(-50%, -50%);
+}
+
+.translate-y-m-60-p {
+  transform: translateY(-60%);
+}
+
+.translate-x-m-10 {
+  transform: translateX(-10px);
+}
+
+.translate-x-m-50-p {
+  transform: translateX(-50%);
+}
+
+.mt-m-8-5-p {
+  margin-top: -8.5%;
+}
+
+.mt-m-1 {
+  margin-top: -1px;
+}
+.mt-m-18 {
+  margin-top: -18px;
+}
+
+.mt-m-128 {
+  margin-top: -128px;
+}
+
+.mt-m-150 {
+  margin-top: -150px;
+}
+
+.mt-m-200 {
+  margin-top: -200px;
+}
+
+.mr-m-18 {
+  margin-right: -18px;
+}
+
+.mb-m-2 {
+  margin-bottom: -2px;
+}
+
+.top-m-36 {
+  top: -36px;
+}
+
+.top-20-p {
+  top: 20%;
+}
+
+.w-70 {
+  width: 70px;
+}
+
+.w-106 {
+  width: 106px;
+}
+
+.w-140 {
+  width: 140px;
+}
+
+.w-320 {
+  width: 320px;
+}
+
+.w-330 {
+  width: 330px;
+}
+
+.w-372 {
+  width: 372px;
+}
+
+.w-80-p {
+  width: 80%;
+}
+
+.w-90-p {
+  width: 90%;
+}
+
+.max-w-432 {
+  max-width: 432px;
+}
+
+.max-w-620 {
+  max-width: 620px;
+}
+
+.max-w-1516 {
+  max-width: 1516px;
+}
+
+.h-60px {
+  height: 60px;
+}
+
+.h-70 {
+  height: 70px;
+}
+
+@media screen and (min-width: 640px) {
+  .sm-w-480 {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .md-mt-m-80 {
+    margin-top: -80px;
+  }
+
+  .md-mr-m-26 {
+    margin-right: -26px;
+  }
+
+  .md-mx-30 {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .md-right-60 {
+    right: 60px;
+  }
+
+  .md-ml-m-20 {
+    margin-left: -20px;
+  }
+
+  .md-top-m-52 {
+    top: -52px;
+  }
+
+  .md-w-96 {
+    width: 96px;
+  }
+
+  .md-w-150 {
+    width: 150px;
+  }
+
+  .md-w-176 {
+    width: 176px;
+  }
+
+  .md-w-180 {
+    width: 180px;
+  }
+
+  .md-w-380 {
+    width: 380px;
+  }
+
+  .md-w-480 {
+    width: 480px;
+  }
+
+  .md-w-560 {
+    width: 560px;
+  }
+
+  .md-w-720 {
+    width: 720px;
+  }
+
+  .md-h-70 {
+    height: 70px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .lg-right-m-50 {
+    right: -50px;
+  }
+
+  .lg-right-120 {
+    right: 120px;
+  }
+
+  .lg-top-m-60 {
+    top: -60px;
+  }
+
+  .lg-pt-158 {
+    padding-top: 158px;
+  }
+
+  .lg-mx-60 {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+  .lg-mt-m-100 {
+    margin-top: -100px;
+  }
+
+  .lg-w-122 {
+    width: 122px;
+  }
+
+  .lg-w-180 {
+    width: 180px;
+  }
+
+  .lg-w-460 {
+    width: 460px;
+  }
+
+  .lg-w-648 {
+    width: 648px;
+  }
+
+  .lg-w-600 {
+    width: 600px;
+  }
+
+  .lg-w-1000 {
+    width: 1000px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .xl-right-160 {
+    right: 160px;
+  }
+
+  .xl-top-m-72 {
+    top: -72px;
+  }
+
+  .xl-pt-250 {
+    padding-top: 250px;
+  }
+
+  .xl-mx-120 {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .xl-mt-m-120 {
+    margin-top: -120px;
+  }
+
+  .xl-w-140 {
+    width: 140px;
+  }
+
+  .xl-w-210 {
+    width: 210px;
+  }
+
+  .xl-w-520 {
+    width: 520px;
+  }
+
+  .xl-w-720 {
+    width: 720px;
+  }
+
+  .xl-w-1200 {
+    width: 1200px;
+  }
+}
+
+.web3modal-modal-lightbox {
+  z-index: 9999 !important;
+}
+
+@media screen and (min-width: 1536px) {
+  .xl2-right-200 {
+    right: 200px;
+  }
+
+  .xl2-top-m-80 {
+    top: -80px;
+  }
+
+  .xl2-left-200 {
+    left: 200px;
+  }
+
+  .xl2-mx-196 {
+    margin-left: 196px;
+    margin-right: 196px;
+  }
+
+  .xl2-w-165 {
+    width: 165px;
+  }
+
+  .xl2-w-580 {
+    width: 580px;
+  }
+
+  .xl2-w-1500 {
+    width: 1500px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
